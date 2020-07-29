@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolVersion
+
+    defaultConfig {
+        applicationId "com.mayandro.cleanarchbaseproject"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Kotlin
+    implementation deps.kotlin.kotlinSDK
+    implementation 'androidx.core:core-ktx:1.3.0'
+
+    // App dependencies
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.cardview
+    implementation deps.androidx.viewpager2
+    implementation deps.androidx.palette
+
+    // Timber
+    implementation deps.logger.timber
+
+    // design
+    implementation deps.design.material
+
+    // Architecture Components
+    implementation deps.arch.extensions
+    implementation deps.arch.viewmodel
+    implementation deps.arch.livaData
+    kapt deps.arch.compiler
+
+    // Room
+    implementation deps.database.room
+    implementation deps.database.ktx
+    kapt deps.database.compiler
+
+    //Navigation
+    implementation deps.arch.navigationui
+    implementation deps.arch.navigationfragment
+
+    // Retrofit 2
+    implementation deps.network.retrofit
+    implementation deps.network.retrofitgson
+    implementation deps.network.okhttplogger
+
+    // Glide
+    implementation deps.imageLib.glide
+
+    // Databinding compiler
+    kapt deps.binding.databinding
+
+    // JetPack Shared Preference Plugins
+    implementation deps.sharedpreferences.preference
+
+    // Koin
+    implementation deps.koin.viewmodel
+    implementation deps.koin.fragment
+    implementation deps.koin.scope
+
+    //coroutine
+    implementation deps.coroutine.android
+    implementation deps.coroutine.core
+
+    // flexbox
+    implementation deps.flexbox.flexbox
+
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+}

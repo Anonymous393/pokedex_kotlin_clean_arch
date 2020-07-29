@@ -1,0 +1,106 @@
+def versions = [
+        'minSdkVersion'              : 21,
+        'targetSdkVersion'           : 29,
+        'compileSdkVersion'          : 29,
+        'buildToolVersion'           : '29.0.2',
+        'kotlinVersion'              : '1.3.61',
+        'dataBindingVersion'         : '3.2.0-alpha10',
+        'coroutinesVersion'          : '1.3.0',
+        'retrofitVersion'            : '2.9.0',
+        'okHttpVersion'              : '3.10.0',
+        'timberVersion'              : '4.5.1',
+        'glideVersion'               : '4.10.0',
+        'preferenceVersion'          : '1.1.0',
+        'materialVersion'            : '1.3.0-alpha01',
+        'appCompatVersion'           : '1.1.0',
+        'constraintLayoutVersion'    : '2.0.0-beta3',
+        'recyclerViewVersion'        : '1.0.0',
+        'cardViewVersion'            : '1.0.0',
+        'viewpager2Version'          : '1.0.0',
+        'firebaseAuthVersion'        : '19.2.0',
+        'firebaseAnalyticsVersion'   : '17.2.1',
+        'navigationVersion'          : '2.2.0',
+        'roomVersion'                : '2.2.1',
+        'workManagerVersion'         : '2.2.0',
+        'lifecycleVersion'           : '2.2.0',
+        'koinVersion'                : '2.1.5',
+        'flexbox'                    : '2.0.1'
+]
+
+// Make versions an extra property
+ext.versions = versions
+ext.deps = [
+
+        kotlin           : [
+                kotlinSDK: "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlinVersion}",
+        ],
+        coroutine           : [
+                android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutinesVersion}",
+                core   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutinesVersion}"
+        ],
+        network          : [
+                retrofit    : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+                retrofitgson: "com.squareup.retrofit2:converter-gson:${versions.retrofitVersion}",
+                okhttp      : "com.squareup.okhttp3:okhttp:${versions.okHttpVersion}",
+                okhttplogger: "com.squareup.okhttp3:logging-interceptor:${versions.okHttpVersion}",
+        ],
+        logger           : [
+                timber: "com.jakewharton.timber:timber:${versions.timberVersion}"
+        ],
+        imageLib         : [
+                glide: "com.github.bumptech.glide:glide:${versions.glideVersion}",
+        ],
+        reporting        : [
+                crashlytics: 'com.crashlytics.sdk.android:crashlytics:2.6.8@aar',
+        ],
+        design           : [
+                material: "com.google.android.material:material:${versions.materialVersion}"
+        ],
+        binding          : [
+                databinding: "com.android.databinding:compiler:${versions.dataBindingVersion}"
+        ],
+        androidx         : [
+                appcompat       : "androidx.appcompat:appcompat:${versions.appCompatVersion}",
+                constraintlayout: "androidx.constraintlayout:constraintlayout:${versions.constraintLayoutVersion}",
+                recyclerview    : "androidx.recyclerview:recyclerview:${versions.recyclerViewVersion}",
+                cardview        : "androidx.cardview:cardview:${versions.cardViewVersion}",
+                viewpager2      : "androidx.viewpager2:viewpager2:${versions.viewpager2Version}",
+                palette         : "androidx.palette:palette:1.0.0"
+        ],
+        arch             : [
+                extensions        : "androidx.lifecycle:lifecycle-extensions:${versions.lifecycleVersion}",
+                compiler          : "androidx.lifecycle:lifecycle-compiler:${versions.lifecycleVersion}",
+                viewmodel         : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycleVersion}",
+                navigationui      : "androidx.navigation:navigation-ui-ktx:${versions.navigationVersion}",
+                navigationfragment: "androidx.navigation:navigation-fragment-ktx:${versions.navigationVersion}",
+                workManager       : "androidx.work:work-runtime-ktx:${versions.workManagerVersion}",
+                livaData          : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycleVersion}"
+        ],
+        database         : [
+                compiler: "androidx.room:room-compiler:${versions.roomVersion}",
+                ktx : "androidx.room:room-ktx:${versions.roomVersion}",
+                room    : "androidx.room:room-runtime:${versions.roomVersion}"
+
+        ],
+        test             : [
+                junit       : 'junit:junit:4.12',
+                truth       : 'com.google.truth:truth:0.32',
+                espressocore: 'com.android.support.test.espresso:espresso-core:2.2.2',
+                mockitocore : 'org.mockito:mockito-core:2.7.17'
+        ],
+        sharedpreferences: [
+                preference: "androidx.preference:preference-ktx:${versions.preferenceVersion}"
+        ],
+        flexbox: [
+                flexbox: "com.google.android:flexbox:${versions.flexbox}"
+        ],
+        firebase         : [
+                auth     : "com.google.firebase:firebase-auth:${versions.firebaseAuthVersion}",
+                analytics: "com.google.firebase:firebase-analytics:${versions.firebaseAnalyticsVersion}"
+        ],
+        koin: [
+                viewmodel: "org.koin:koin-androidx-viewmodel:${versions.koinVersion}",
+                fragment: "org.koin:koin-androidx-fragment:${versions.koinVersion}",
+                scope: "org.koin:koin-androidx-scope:${versions.koinVersion}"
+        ],
+]

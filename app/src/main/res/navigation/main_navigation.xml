@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/dataSetupFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.pokemon_dashboard.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_pokemon_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_pokedexFragment"
+            app:destination="@id/pokedexFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_searchPokemonFragment"
+            app:destination="@id/searchPokemonFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_allMovesFragment"
+            app:destination="@id/allMovesFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_allTypesFragment"
+            app:destination="@id/allTypesFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_allItemsFragment"
+            app:destination="@id/allItemsFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_allLocationsFragment"
+            app:destination="@id/allLocationsFragment" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_allBerriesFragment"
+            app:destination="@id/allBerriesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pokedexFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.pokedex.PokedexFragment"
+        android:label="PokedexFragment"
+        tools:layout="@layout/fragment_pokedex" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_pokedexItemFragment"
+            app:destination="@id/pokedexItemFragment" >
+            <argument
+                android:name="pokedexEntry"
+                app:argType="integer"
+                android:defaultValue="1" />
+
+            <argument
+                android:name="pokemonId"
+                app:argType="integer"
+                android:defaultValue="1" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/pokedexItemFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.pokedex_item.PokedexItemFragment"
+        android:label="PokedexItemFragment"
+        tools:layout="@layout/fragment_pokedex_item"/>
+
+    <fragment
+        android:id="@+id/dataSetupFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.data_setup.DataSetupFragment"
+        android:label="DataSetupFragment"
+        tools:layout="@layout/fragment_data_setup">
+
+        <action
+            android:id="@+id/action_dataSetupFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/dataSetupFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchPokemonFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.search_pokemon.SearchPokemonFragment"
+        android:label="SearchPokemonFragment"
+        tools:layout="@layout/fragment_search_pokemon">
+        <action
+            android:id="@+id/action_searchPokemonFragment_to_pokedexItemFragment"
+            app:destination="@id/pokedexItemFragment" >
+            <argument
+                android:name="pokedexEntry"
+                app:argType="integer"
+                android:defaultValue="1" />
+
+            <argument
+                android:name="pokemonId"
+                app:argType="integer"
+                android:defaultValue="1" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/allMovesFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.moves.AllMovesFragment"
+        android:label="AllMovesFragment"
+        tools:layout="@layout/fragment_all_moves"/>
+
+    <fragment
+        android:id="@+id/allTypesFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.types.AllTypesFragment"
+        android:label="AllTypesFragment"
+        tools:layout="@layout/fragment_types"/>
+
+    <fragment
+        android:id="@+id/allItemsFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.items.AllItemsFragment"
+        android:label="AllItemsFragment"
+        tools:layout="@layout/fragment_items"/>
+
+    <fragment
+        android:id="@+id/allLocationsFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.locations.AllLocationsFragment"
+        android:label="AllLocationsFragment"
+        tools:layout="@layout/fragment_locations"/>
+
+    <fragment
+        android:id="@+id/allBerriesFragment"
+        android:name="com.mayandro.cleanarchbaseproject.ui.home.berries.AllBerriesFragment"
+        android:label="AllBerriesFragment"
+        tools:layout="@layout/fragment_berries"/>
+
+
+</navigation>

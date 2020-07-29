@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="SlidingUpPanelLayout">
+    <attr name="umanoPanelHeight" format="dimension" />
+    <attr name="umanoShadowHeight" format="dimension" />
+    <attr name="umanoParallaxOffset" format="dimension" />
+    <attr name="umanoFadeColor" format="color" />
+    <attr name="umanoFlingVelocity" format="integer" />
+    <attr name="umanoDragView" format="reference" />
+    <attr name="umanoScrollableView" format="reference" />
+    <attr name="umanoOverlay" format="boolean"/>
+    <attr name="umanoClipPanel" format="boolean"/>
+    <attr name="umanoAnchorPoint" format="float" />
+    <attr name="umanoInitialState" format="enum">
+      <enum name="expanded" value="0" />
+      <enum name="collapsed" value="1" />
+      <enum name="anchored" value="2" />
+      <enum name="hidden" value="3" />
+    </attr>
+    <attr name="umanoScrollInterpolator" format="reference" />
+  </declare-styleable>
+
+  <declare-styleable name="ExpandableFabMenu">
+    <attr name="content_options" format="reference"/>
+    <attr name="close_on_click" format="boolean"/>
+    <attr name="color_main_button" format="color"/>
+    <attr name="color_secondary_buttons" format="color"/>
+    <attr name="rotate_main_button" format="boolean"/>
+    <attr name="size_main_button" format="integer"/>
+    <attr name="size_secondary_buttons" format="integer"/>
+    <attr name="expanded_background_color" format="color"/>
+    <attr name="label_background_color" format="color"/>
+    <attr name="label_background_drawable" format="reference"/>
+    <attr name="label_text_color" format="color"/>
+    <attr name="enable_main_as_action" format="boolean"/>
+    <attr name="main_action_drawable" format="reference"/>
+  </declare-styleable>
+
+  <declare-styleable name="AvatarImageBehavior">
+    <attr name="finalYPosition" format="dimension"/>
+    <attr name="startXPosition" format="dimension"/>
+    <attr name="startToolbarPosition" format="dimension"/>
+    <attr name="startHeight" format="dimension"/>
+    <attr name="finalHeight" format="dimension"/>
+  </declare-styleable>
+</resources>

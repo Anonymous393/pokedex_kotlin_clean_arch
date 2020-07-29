@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/fragment_pokedex_item_end"
+        app:constraintSetStart="@layout/fragment_pokedex_item"
+        app:duration="1000">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/linearLayout"
+            app:touchAnchorSide="top" />
+
+        <KeyFrameSet>
+
+            //POKEMON IMAGE
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@id/imageViewPokemon" />
+
+            <KeyAttribute
+                android:alpha="0.5"
+                motion:framePosition="10"
+                motion:motionTarget="@id/imageViewPokemon" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="20"
+                motion:motionTarget="@id/imageViewPokemon" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="100"
+                motion:motionTarget="@id/imageViewPokemon" />
+
+            //POKEMON SPECIES
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@id/textViewPokemonSpecies" />
+
+            <KeyAttribute
+                android:alpha="0.5"
+                motion:framePosition="10"
+                motion:motionTarget="@id/textViewPokemonSpecies" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="20"
+                motion:motionTarget="@id/textViewPokemonSpecies" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="100"
+                motion:motionTarget="@id/textViewPokemonSpecies" />
+
+            //POKEMON TYPES
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@id/chipGroupPokemonType" />
+
+            <KeyAttribute
+                android:alpha="0.5"
+                motion:framePosition="10"
+                motion:motionTarget="@id/chipGroupPokemonType" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="20"
+                motion:motionTarget="@id/chipGroupPokemonType" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="100"
+                motion:motionTarget="@id/chipGroupPokemonType" />
+
+            //POKEMON NUMBER
+            <KeyAttribute
+                android:alpha="1"
+                motion:framePosition="0"
+                motion:motionTarget="@id/textViewPokemonNumber" />
+
+            <KeyAttribute
+                android:alpha="0.5"
+                motion:framePosition="10"
+                motion:motionTarget="@id/textViewPokemonNumber" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="20"
+                motion:motionTarget="@id/textViewPokemonNumber" />
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="100"
+                motion:motionTarget="@id/textViewPokemonNumber" />
+        </KeyFrameSet>
+
+
+    </Transition>
+
+</MotionScene>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="dashboard_title">What Pokemon\nyou are looking for?</string>
+    <string name="type_background">type_background</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="breeding">Breeding</string>
+    <string name="gender">Gender</string>
+    <string name="egg_group">Egg Group</string>
+    <string name="egg_cycle">Egg Cycle</string>
+    <string name="ability">Ability</string>
+    <string name="moves">Moves</string>
+</resources>

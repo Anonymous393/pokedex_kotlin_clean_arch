@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/fragment_pokemon_dashboard_end"
+        app:constraintSetStart="@layout/fragment_pokemon_dashboard_start">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/recyclerViewNews"
+            app:touchAnchorSide="top" />
+
+        <KeyFrameSet>
+
+            //POKEMON IMAGE
+            <KeyAttribute
+                android:alpha="1"
+                app:framePosition="0"
+                app:motionTarget="@id/recyclerViewMenu" />
+
+            <KeyAttribute
+                app:framePosition="10"
+                app:motionTarget="@id/recyclerViewMenu"
+                android:alpha="0.5" />
+
+            <KeyAttribute
+                app:framePosition="20"
+                app:motionTarget="@id/recyclerViewMenu"
+                android:alpha="0" />
+
+            <KeyAttribute
+                app:framePosition="100"
+                app:motionTarget="@id/recyclerViewMenu"
+                android:alpha="0" />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>
