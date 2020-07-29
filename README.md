@@ -4,7 +4,10 @@ A demo application for android arch component with MVVM using Koin, Arch Compone
 ## UI Credit
 https://dribbble.com/shots/6563578-Pokedex-App-Animation
 
-##Developed UI Sceen Shots
+## Developed UI Video
+![vd-20200728-180217-rzqrTRQC-Sgit](https://user-images.githubusercontent.com/16761273/88807491-15e5ff80-d1b2-11ea-8724-405de4e7027c.gif)
+
+## Developed UI Sceen Shots
 ![Screenshot_20200729-141704](https://user-images.githubusercontent.com/16761273/88805371-5f811b00-d1af-11ea-9d28-38452846fca6.png)
 ![Screenshot_20200729-151808](https://user-images.githubusercontent.com/16761273/88805381-627c0b80-d1af-11ea-8f68-df76b80556aa.png)
 ![Screenshot_20200729-151816](https://user-images.githubusercontent.com/16761273/88805387-63ad3880-d1af-11ea-82f9-dc2a456373c8.png)
@@ -15,5 +18,3 @@ https://dribbble.com/shots/6563578-Pokedex-App-Animation
 ![Screenshot_20200729-151853](https://user-images.githubusercontent.com/16761273/88805399-6576fc00-d1af-11ea-8205-e7b35b3b65cb.png)
 ![Screenshot_20200729-151832](https://user-images.githubusercontent.com/16761273/88805400-660f9280-d1af-11ea-9549-6c6ac4812765.png)
 
-## Developed UI Video
-![vd-20200728-180217-rzqrTRQC-Sgit](https://user-images.githubusercontent.com/16761273/88807491-15e5ff80-d1b2-11ea-8724-405de4e7027c.gif)
